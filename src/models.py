@@ -74,6 +74,7 @@ class Favorites(db.Model):
     favorite = db.Column(db.String(80), unique=False, nullable=False)
     planetid = db.Column(db.String(80), unique=False, nullable=False)
     is_active = db.Column(db.Boolean(), unique=False, nullable=False)
+    userfavorites = db.Column(db.Integer, db.ForeignKey(User.id))
     
 
     def __repr__(self):
